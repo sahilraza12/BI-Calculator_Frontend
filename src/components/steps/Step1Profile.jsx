@@ -176,6 +176,10 @@ export default function Step1Profile() {
     try {
       clearErrors("email");
 
+      if (!API_BASE_URL) {
+        throw new Error("API URL is not configured");
+      }
+
       const emailResponse = await fetch(
         `${API_BASE_URL}/api/leads/verify-email?email=${encodeURIComponent(
           data.email,
@@ -184,6 +188,15 @@ export default function Step1Profile() {
           method: "GET",
         },
       );
+
+      const contentType = emailResponse.headers.get("content-type") || "";
+      if (!contentType.includes("application/json")) {
+        throw new Error(
+          emailResponse.ok
+            ? "The email verification service returned an invalid response"
+            : `Email verification failed (${emailResponse.status})`,
+        );
+      }
 
       const emailData = await emailResponse.json();
 
