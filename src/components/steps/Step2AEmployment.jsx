@@ -83,7 +83,6 @@ export default function Step2AEmployment() {
           <option value="Private Limited">Private Limited</option>
           <option value="Partnership / Proprietorship">Partnership / Proprietorship</option>
           <option value="MNC">MNC</option>
-          <option value="Proprietorship">Proprietorship</option>
         </select>
         {errors.employerType && (
           <p className="text-red-500 text-sm">{errors.employerType.message}</p>
