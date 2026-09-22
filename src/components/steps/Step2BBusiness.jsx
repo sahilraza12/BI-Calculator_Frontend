@@ -128,11 +128,9 @@ export default function Step2BBusiness() {
           className="w-full border p-2 rounded"
         >
           <option value="">Select</option>
-          <option value="Strongly Increasing">Strongly Increasing</option>
-          <option value="Increasing">Increasing</option>
-          <option value="Stable">Stable</option>
-          <option value="Declining">Declining</option>
-          <option value="Severely Declining">Severely Declining</option>
+          <option value="Positive">Positive</option>
+          <option value="Flat">Flat</option>
+          <option value="Negative">Negative</option>
         </select>
         {errors.turnoverTrend && (
           <p className="text-red-500 text-sm">{errors.turnoverTrend.message}</p>
@@ -149,11 +147,9 @@ export default function Step2BBusiness() {
           className="w-full border p-2 rounded"
         >
           <option value="">Select</option>
-          <option value="Strongly Increasing">Strongly Increasing</option>
-          <option value="Increasing">Increasing</option>
-          <option value="Stable">Stable</option>
-          <option value="Declining">Declining</option>
-          <option value="Loss / Deteriorating">Loss / Deteriorating</option>
+          <option value="Positive">Positive</option>
+          <option value="Flat">Flat</option>
+          <option value="Negative">Negative</option>
         </select>
         {errors.profitTrend && (
           <p className="text-red-500 text-sm">{errors.profitTrend.message}</p>
@@ -170,11 +166,9 @@ export default function Step2BBusiness() {
           className="w-full border p-2 rounded"
         >
           <option value="">Select</option>
-          <option value="Strongly Increasing">Strongly Increasing</option>
-          <option value="Increasing">Increasing</option>
-          <option value="Stable">Stable</option>
-          <option value="Declining">Declining</option>
-          <option value="Significantly Declining">Significantly Declining</option>
+          <option value="Positive">Positive</option>
+          <option value="Flat">Flat</option>
+          <option value="Negative">Negative</option>
         </select>
         {errors.capitalTrend && (
           <p className="text-red-500 text-sm">{errors.capitalTrend.message}</p>

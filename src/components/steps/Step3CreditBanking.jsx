@@ -20,8 +20,6 @@ export default function Step3CreditBanking() {
       bounces6Months: formData.bounces6Months ?? "",
       bounces3Months: formData.bounces3Months ?? "",
       avgBankBalance: formData.avgBankBalance ?? "",
-      bankingConduct: formData.bankingConduct ?? "",
-      emiDiscipline: formData.emiDiscipline ?? "",
     },
   });
 
@@ -145,44 +143,16 @@ export default function Step3CreditBanking() {
         >
           <option value="">Select Average Bank Balance</option>
           <option value="Below ₹50,000">Below ₹50,000</option>
-          <option value="₹50,000–₹1 lakh">₹50,000–₹1 lakh</option>
-          <option value="₹1–2 lakh">₹1–2 lakh</option>
-          <option value="₹2–5 lakh">₹2–5 lakh</option>
-          <option value="More than ₹5 lakh">More than ₹5 lakh</option>
+          <option value="₹50,000–₹1 lakh">₹50,000–₹1,00,000</option>
+          <option value="₹1–2 lakh">₹1,00,000–2,00,000</option>
+          <option value="₹2–5 lakh">₹2,00,000–5,00,000</option>
+          <option value="More than ₹5 lakh">More than ₹5,00,000</option>
         </select>
         {errors.avgBankBalance && (
           <p className="text-red-500 text-sm">
             {errors.avgBankBalance.message}
           </p>
         )}
-      </div>
-
-      {/* Navigation */}
-      <div className="mb-4">
-        <label className="block mb-1 font-medium">Banking Conduct</label>
-        <select {...register("bankingConduct")} className="w-full border p-2 rounded">
-          <option value="">Select Banking Conduct</option>
-          <option value="Excellent / regular">Excellent / regular</option>
-          <option value="Good">Good</option>
-          <option value="Satisfactory">Satisfactory</option>
-          <option value="Occasional irregularity">Occasional irregularity</option>
-          <option value="Frequent irregularity">Frequent irregularity</option>
-          <option value="Highly irregular">Highly irregular</option>
-        </select>
-        {errors.bankingConduct && <p className="text-red-500 text-sm">{errors.bankingConduct.message}</p>}
-      </div>
-
-      <div className="mb-6">
-        <label className="block mb-1 font-medium">EMI / Banking Discipline</label>
-        <select {...register("emiDiscipline")} className="w-full border p-2 rounded">
-          <option value="">Select EMI Discipline</option>
-          <option value="No bounce + timely servicing">No bounce + timely servicing</option>
-          <option value="Minor isolated delay">Minor isolated delay</option>
-          <option value="Occasional delays">Occasional delays</option>
-          <option value="Repeated delays">Repeated delays</option>
-          <option value="Serious irregularity">Serious irregularity</option>
-        </select>
-        {errors.emiDiscipline && <p className="text-red-500 text-sm">{errors.emiDiscipline.message}</p>}
       </div>
 
       {/* Navigation */}

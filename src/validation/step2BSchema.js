@@ -38,11 +38,9 @@ export const step2BSchema = z.object({
 
   turnoverTrend: z.enum(
     [
-      "Strongly Increasing",
-      "Increasing",
-      "Stable",
-      "Declining",
-      "Severely Declining",
+      "Positive",
+      "Flat",
+      "Negative",
     ],
     {
       required_error: "Please select turnover trend",
@@ -51,11 +49,9 @@ export const step2BSchema = z.object({
 
   profitTrend: z.enum(
     [
-      "Strongly Increasing",
-      "Increasing",
-      "Stable",
-      "Declining",
-      "Loss / Deteriorating",
+      "Positive",
+      "Flat",
+      "Negative",
     ],
     {
       required_error: "Please select profit trend",
@@ -64,11 +60,9 @@ export const step2BSchema = z.object({
 
   capitalTrend: z.enum(
     [
-      "Strongly Increasing",
-      "Increasing",
-      "Stable",
-      "Declining",
-      "Significantly Declining",
+      "Positive",
+      "Flat",
+      "Negative",
     ],
     {
       required_error: "Please select capital trend",

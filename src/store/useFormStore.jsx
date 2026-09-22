@@ -23,7 +23,7 @@ export const useFormStore = create(
     }),
     {
       name: "bi-rating-form",
-      version: 1,
+      version: 2,
       migrate: () => ({ step: 1, formData: {} }),
       storage: {
         getItem: (name) =>
